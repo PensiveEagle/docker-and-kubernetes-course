@@ -16,11 +16,26 @@ This section's project is about networking in Kubernetes!
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#docker">Docker</a>
+          <ul>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#installation">Installation</a></li>
+          </ul>
+        </li>
+        <li><a href="#kubernetes">Kubernetes</a>
+          <ul>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#installation">Installation</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#docker-usage">Docker Usage</a></li>
+        <li><a href="#kubernetes-usage">Kubernetes Usage</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
@@ -50,14 +65,64 @@ A Docker Compose file is provided to run the system without the need of Kubernet
 [![Kubernetes][kubernetes-shield]][kubernetes-url]
 
 ## Getting Started
+There are two ways to use this projects using Docker on your local machine or using Kubernetes
 
-### Prerequisites
+### Docker
+#### Prerequisites
+To run the project using Docker on your local machine you will need to have Docker installed - <a href="https://docs.docker.com/get-started/get-docker/" target="_blank">Get Started with Docker</a>
 
+#### Installation
+##### Step 1. 
+Navigate to the project location of `docker-compose.yaml` in your terminal of choice
+##### Step 2. 
+Run
+```sh
+docker compose up -d --build
+```
 
-### Installation
+### Kubernetes
+#### Prerequisites
+In order to run this system in Kubernetes you need an existing Kubernetes cluster connected to `kubectl` accessible via a terminal.
+
+For local development try <a href="https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download" target="_blank">Minikube</a>
+
+#### Installation
 
 
 ## Usage
+### Docker Usage
+##### Step 1. 
+You should be able to reach each of the applications through a client (e.g <a href="https://www.postman.com/" target="_blank">Postman</a>)
+##### Step 2. 
+To reach the Users API you can send a POST request to `localhost:8080/login` with some dummy creds, such as 
+```json
+{
+  "email": "test@test.com",
+  "password": "testers"
+}
+```
+This will return a token in a json document
+##### Step 3.
+You can send tasks to the Tasks API by sending a POST request to `localhost:8000/tasks`
+
+Adding an "Authorization" header key with a value of "Bearer abc"
+
+And a body of content, like the following:
+
+```json
+{
+  "text": "A task!",
+  "title": "Do this!"
+}
+```
+##### Step 4.
+You can retrieve tasks from the Tasks API by sending a get request to `localhost:8000/tasks`
+
+Adding an "Authorization" header key with a value of "Bearer abc"
+
+<strong>NOTE: This will return an error if no tasks have previously been added to the task list via a POST request detailed in Step 3.</strong>
+
+### Kubernetes Usage
 
 
 
