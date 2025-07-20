@@ -37,6 +37,9 @@ The course covers Docker and Kubernetes from the basic principles of containeris
 [![Kubernetes][kubernetes-shield]][kubernetes-url]
 
 ### Sections
+<ul>
+    <li><a href="/kub-network/README.md">Kubernetes Networking Project (/kub-network) [Section 14]</a>
+</ul>
 
 ## Acknowledgements
 
