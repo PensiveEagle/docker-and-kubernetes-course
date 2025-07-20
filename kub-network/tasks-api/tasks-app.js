@@ -49,7 +49,7 @@ app.post('/tasks', async (req, res) => {
     const title = req.body.title;
     const task = { title, text };
     const jsonTask = JSON.stringify(task);
-    fs.appendFile('/tasks/tasks.txt', jsonTask + 'TASK_SPLIT', (err) => {
+    fs.appendFile(filePath, jsonTask + 'TASK_SPLIT', (err) => {
       if (err) {
         console.log(err);
         return res.status(500).json({ message: 'Storing the task failed.' });
