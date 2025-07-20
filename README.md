@@ -32,7 +32,7 @@ This project is a large mono-repo for all of the section projects from the Docke
 The course covers Docker and Kubernetes from the basic principles of containerisation all the way to deploying Kubernetes evironments on AWS.
 
 ### Built With
-* [![Next][Next.js]][Next-url]
+[![Next][Next.js]][Next-url]
 
 ### Sections
 
@@ -51,7 +51,7 @@ This repo is based off of code shared through and the learning I acheived from t
 [license-shield]: https://img.shields.io/github/license/pensiveeagle/docker-and-kubernetes-course.svg?style=for-the-badge
 [license-url]: https://github.com/pensiveeagle/docker-and-kubernetes-course/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/jameshall-profile/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
