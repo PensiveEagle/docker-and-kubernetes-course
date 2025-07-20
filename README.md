@@ -33,6 +33,8 @@ The course covers Docker and Kubernetes from the basic principles of containeris
 
 ### Built With
 [![Next][Next.js]][Next-url]
+[![Docker][docker-shield]][docker-url]
+[![Kubernetes][kubernetes-shield]][kubernetes-url]
 
 ### Sections
 
@@ -55,3 +57,7 @@ This repo is based off of code shared through and the learning I acheived from t
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+[docker-shield]: https://img.shields.io/badge/docker-000000?style=for-the-badge&logo=docker&logoColor=white
+[docker-url]: https://www.docker.com/
+[kubernetes-shield]: https://img.shields.io/badge/kubernetes-000000?style=for-the-badge&logo=kubernetes&logoColor=white
+[kubernetes-url]: https://kubernetes.io/
