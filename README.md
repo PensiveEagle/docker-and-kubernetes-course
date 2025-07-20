@@ -27,7 +27,7 @@ A mono-repo for the projects of my Docker and Kubernetes Udemy Course
 
 ## About the Project
 
-This project is a large mono-repo for all of the section projects from the Docker and Kubernetes course I am undertaking (<a href="#" target="_blank">Course Name</a>).
+This project is a large mono-repo for all of the section projects from the Docker and Kubernetes course I am undertaking (<a href="#" target="_blank">Learn Docker, Docker Compose, Multi-Container Projects, Deployment and all about Kubernetes from the ground up!</a>).
 
 The course covers Docker and Kubernetes from the basic principles of containerisation all the way to deploying Kubernetes evironments on AWS.
 
@@ -38,7 +38,7 @@ The course covers Docker and Kubernetes from the basic principles of containeris
 
 ## Acknowledgements
 
-This repo is based off of code shared through and the learning I acheived from the online <a href="#" target="_blank">Course Name</a> Udemy course. If you are trying to learn Docker and Kubernetes I would highly recommend this course.
+This repo is based off of code shared through and the learning I acheived from the online <a href="#" target="_blank">Learn Docker, Docker Compose, Multi-Container Projects, Deployment and all about Kubernetes from the ground up!</a> Udemy course. If you are trying to learn Docker and Kubernetes I would highly recommend this course.
 
 [contributors-shield]: https://img.shields.io/github/contributors/pensiveeagle/docker-and-kubernetes-course.svg?style=for-the-badge
 [contributors-url]: https://github.com/pensiveeagle/docker-and-kubernetes-course/graphs/contributors
