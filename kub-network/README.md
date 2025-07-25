@@ -43,7 +43,7 @@ This section's project is about networking in Kubernetes!
 This section project is designed to help me learn how to configure and manage the network connections within the Kubernetes cluster, including cluster external connections, inter-pod connections, and intra-pod connections.
 
 This will be achieved using the following architecture:
-![Architecture](/docs/images/kub-network-architecture.png)
+![Architecture](/docs/images/kub-network-architecture.svg)
 
 The project consists of three backend APIs working together from different containers and pods.
 
