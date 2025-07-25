@@ -19,6 +19,3 @@ spec:
           env:
             - name: AUTH_ADDRESS
               value: localhost
-        - name: auth
-          image: pensiveeagle/kub-net-demo:auth-api-1
-          imagePullPolicy: Always
