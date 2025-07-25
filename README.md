@@ -32,7 +32,7 @@ This project is a large mono-repo for all of the section projects from the Docke
 The course covers Docker and Kubernetes from the basic principles of containerisation all the way to deploying Kubernetes evironments on AWS.
 
 ### Built With
-[![Node][Node.js]][Node-url]
+[![Node][Node.js-shield]][Node-url]
 [![Docker][docker-shield]][docker-url]
 [![Kubernetes][kubernetes-shield]][kubernetes-url]
 
@@ -58,7 +58,7 @@ This repo is based off of code shared through and the learning I acheived from t
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jameshall-profile/
 [product-screenshot]: images/screenshot.png
-[Node.js]: https://img.shields.io/badge/node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white
+[Node.js-shield]: https://img.shields.io/badge/node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node-url]: https://nodejs.org/
 [docker-shield]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://www.docker.com/

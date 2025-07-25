@@ -60,7 +60,7 @@ A Docker Compose file is provided to run the system without the need of Kubernet
 <strong>The node.js code in this project was provided through the <a href="#" target="_blank">Learn Docker, Docker Compose, Multi-Container Projects, Deployment and all about Kubernetes from the ground up!</a> Udemy Course, and was not authored by myself. Any edits I have made will be marked with comments!</strong>
 
 ### Built With
-[![Node][Node.js]][Node-url]
+[![Node][Node.js-shield]][Node-url]
 [![Docker][docker-shield]][docker-url]
 [![Kubernetes][kubernetes-shield]][kubernetes-url]
 
@@ -131,7 +131,7 @@ Adding an "Authorization" header key with a value of "Bearer abc"
 
 <!-- ----- Links ----- -->
 [product-screenshot]: images/screenshot.png
-[Node.js]: https://img.shields.io/badge/node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white
+[Node.js-shield]: https://img.shields.io/badge/node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node-url]: https://nodejs.org/
 [docker-shield]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://www.docker.com/
