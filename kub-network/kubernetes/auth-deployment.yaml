@@ -7,12 +7,12 @@ spec:
   selector:
     matchLabels:
       app: auth
-    template:
-      metadata:
-        labels:
-          app: auth
-      spec:
-        containers:
-          - name: auth
-            image: pensiveeagle/kub-net-demo:auth-api-1
-            imagePullPolicy: Always
+  template:
+    metadata:
+      labels:
+        app: auth
+    spec:
+      containers:
+        - name: auth
+          image: pensiveeagle/kub-net-demo:auth-api-1
+          imagePullPolicy: Always
