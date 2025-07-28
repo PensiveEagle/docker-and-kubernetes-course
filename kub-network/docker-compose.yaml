@@ -20,4 +20,4 @@ services:
     ports:
       - "80:80"
     environment:
-      TASKS_ADDRESS: tasks
+      TASKS_ADDRESS: "localhost:8000"
