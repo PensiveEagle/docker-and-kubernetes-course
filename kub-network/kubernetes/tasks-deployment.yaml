@@ -15,7 +15,7 @@ spec:
       containers:
         - name: tasks
           image: pensiveeagle/kub-net-demo:tasks-api-1
-          imagePullPolicy Always
+          imagePullPolicy: Always
           env:
             - name: AUTH_ADDRESS
               value: "auth-service.default"
