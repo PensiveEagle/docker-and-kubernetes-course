@@ -33,7 +33,7 @@ function App() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer abc',
+        'Authorization': 'Bearer abc',
       },
       body: JSON.stringify(task),
     })
