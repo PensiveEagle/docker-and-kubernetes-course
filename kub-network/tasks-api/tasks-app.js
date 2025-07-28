@@ -16,7 +16,7 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'POST,GET,OPTIONS');
   res.setHeader('Access-Control-Allow_Headers', 'Content-Type,Authorization');
   next();
-})
+});
 
 const extractAndVerifyToken = async (headers) => {
   if (!headers.authorization) {
