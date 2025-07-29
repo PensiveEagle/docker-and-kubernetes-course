@@ -1,5 +1,5 @@
-$registry_account_name = "pensiveeagle"
-$repository_name = "kub-net-demo"
+# $registry_account_name = "pensiveeagle"
+# $repository_name = "kub-net-demo"
 
 docker build -t $registry_account_name/$repository_name":users-api-1" ./users-api
 
