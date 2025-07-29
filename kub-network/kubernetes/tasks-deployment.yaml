@@ -1,0 +1,28 @@
+# ______
+#    |  |
+#    |__|
+#    |  |
+# \_/|  |
+#
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasks-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tasks
+  template:
+    metadata:
+      labels:
+        app: tasks
+    spec:
+      containers:
+        - name: tasks
+          image: pensiveeagle/kub-net-demo:tasks-api-1
+          imagePullPolicy: Always
+          env:
+            - name: AUTH_ADDRESS
+              value: "auth-service.default"

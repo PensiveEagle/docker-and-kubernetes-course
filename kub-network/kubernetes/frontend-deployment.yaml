@@ -1,0 +1,25 @@
+# ______
+#    |  |
+#    |__|
+#    |  |
+# \_/|  |
+#
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: pensiveeagle/kub-net-demo:frontend-1
+          imagePullPolicy: Always
