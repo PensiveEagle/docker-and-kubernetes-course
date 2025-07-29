@@ -61,6 +61,7 @@ A Docker Compose file is provided to run the system without the need of Kubernet
 
 ### Built With
 [![Node][Node.js-shield]][Node-url]
+[![React][react-shield]][react-url]
 [![Docker][docker-shield]][docker-url]
 [![Kubernetes][kubernetes-shield]][kubernetes-url]
 
@@ -82,30 +83,28 @@ docker compose up -d --build
 
 ### Kubernetes
 #### Prerequisites
+##### Kubernetes Cluster
 In order to run this system in Kubernetes you need an existing Kubernetes cluster connected to `kubectl` accessible via a terminal.
 
 For local development try <a href="https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download" target="_blank">Minikube</a>
 
+##### Docker Hub Container Repository
+You will also need a <a href="#" target="_blank">Docker Hub</a> account and a repository to store your images in
+
 #### Installation
 ##### Step 1.
-Build all container images and push them to an online container registry
+Set your registry account name and repository name in the terminal
 ```sh
-cd kub-network
-
-docker build -t < registry-account-name >/< repository-name >:users-api-1 ./users-api
-
-docker build -t < registry-account-name >/< repository-name >:tasks-api-1 ./task-api
-
-docker build -t < registry-account-name >/< repository-name >:auth-api-1 ./auth-api
-
-docker push < registry-account-name >/< repository-name >:users-api-1
-
-docker push < registry-account-name >/< repository-name >:tasks-api-1
-
-docker push < registry-account-name >/< repository-name >:auth-api-1
+$registry_account_name = "< registry-account-name >"
+$repository_name = "< repository-name >"
+```
+##### Step 2.
+Build all container images and push them to an online container registry by running the `docker-images-setup.ps1` shell script
+```sh
+./docker-images-setup.ps1
 ```
 
-##### Step 2.
+##### Step 3.
 Update the image names in the deployment yaml files under `containers` for each API. For example, in `kubernetes/users-deployment.yaml`:
 ```yaml
 ...
@@ -114,18 +113,30 @@ Update the image names in the deployment yaml files under `containers` for each 
       image: < registry-account-name >/< repository-name >:users-api-1
 ...
 ```
-
-##### Step 3.
-Apply deployment definitions to the Kubernetes Cluster
-```sh
-kubectl apply -f="kubernetes/users-deployment.yaml" -f="kubernetes/auth-deployment.yaml" -f="kubernetes/tasks-deployment.yaml"
-```
-
 ##### Step 4.
-Apply service definitions to the Kubernetes Cluster
+<strong>ONLY IF USING MINIKUBE</strong><br />
+Start your Minikube cluster
+
 ```sh
-kubectl apply -f="kubernetes/users-service.yaml" -f="kubernetes/tasks-service.yaml" -f="kubernetes/auth-service.yaml"
+minikube start
 ```
+
+##### Step 5.
+Apply Kubernetes definitions to your Kubernetes Cluster using the `kubernetes-setup.ps1` shell script
+```sh
+./kubernetes-setup.ps1
+```
+##### Step 6.
+<strong>ONLY IF USING MINIKUBE</strong><br />
+Run the Minikube command to expose the Load Balancer services:
+```sh
+minikube service users-service
+minikube service tasks-service
+minikube service frontend-service
+```
+(If you are using the Docker driver for Minikube then a tunnel is required and you will need to run these commands in separate terminals.)
+
+This command should return the IP addresses each service can be reached on
 
 ## Usage
 ### Docker Usage
@@ -161,16 +172,6 @@ Adding an "Authorization" header key with a value of "Bearer abc"
 <strong>NOTE: This will return an error if no tasks have previously been added to the task list via a POST request detailed in Step 3.</strong>
 
 ### Kubernetes Usage
-##### Step 0.
-<strong>ONLY IF USING MINIKUBE</strong><br />
-Run the Minikube command to expose the Load Balancer services:
-```sh
-minikube service users-service
-minikube service tasks-service
-```
-(If you are using the Docker driver for Minikube then a tunnel is required and you will need to run these commands in separate terminals.)
-
-This command should return the IP addresses each service can be reached on
 ##### Step 1. 
 You should be able to reach each of the applications through a client (e.g <a href="https://www.postman.com/" target="_blank">Postman</a>)
 ##### Step 2. 
@@ -202,12 +203,17 @@ Adding an "Authorization" header key with a value of "Bearer abc"
 
 <strong>NOTE: This will return an error if no tasks have previously been added to the task list via a POST request detailed in Step 3.</strong>
 
+##### Step 5.
+You can also use the frontend React web app to interact with the system which can be reached at the provided service url `frontend-service-url`
+
 
 
 
 
 <!-- ----- Links ----- -->
 [product-screenshot]: images/screenshot.png
+[react-shield]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=grey
+[react-url]: https://react.dev/
 [Node.js-shield]: https://img.shields.io/badge/node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node-url]: https://nodejs.org/
 [docker-shield]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white

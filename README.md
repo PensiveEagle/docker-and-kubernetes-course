@@ -33,6 +33,7 @@ The course covers Docker and Kubernetes from the basic principles of containeris
 
 ### Built With
 [![Node][Node.js-shield]][Node-url]
+[![React][react-shield]][react-url]
 [![Docker][docker-shield]][docker-url]
 [![Kubernetes][kubernetes-shield]][kubernetes-url]
 
@@ -60,6 +61,8 @@ This repo is based off of code shared through and the learning I acheived from t
 [product-screenshot]: images/screenshot.png
 [Node.js-shield]: https://img.shields.io/badge/node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white
 [Node-url]: https://nodejs.org/
+[react-shield]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=grey
+[react-url]: https://react.dev/
 [docker-shield]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
 [docker-url]: https://www.docker.com/
 [kubernetes-shield]: https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white
